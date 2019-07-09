@@ -80,7 +80,8 @@ function handle(target: Wrap, prefix?: boolean, input?: boolean, formatAs?: Form
                 if (getSetting("alwaysInputBoxOnPrefix") == true || input) {
                     vscode.window.showInputBox({placeHolder: 'Prefix string', value: '', prompt: 'Use text from input box as prefix'}).then((val) => {
                         if (val != undefined) {
-                            wrapData.txt = getSetting('format.wrap.prefixFunctionName').concat("('", val.trim(), "',", wrapData.item, ")");
+                            //wrapData.txt = getSetting('format.wrap.prefixFunctionName').concat("('", val.trim(), "',", wrapData.item, ")");
+                            wrapData.txt = getSetting('format.wrap.prefixStringFromInput').replace('$func', getSetting('format.wrap.prefixFunctionName')).replace('$prefix', val).replace(/[$]var/g, wrapData.item);
                             resolve(wrapData);
                         } else reject('INPUT_CANCEL');
                     })
