@@ -111,9 +111,9 @@
                     "default": "$func('$var:', $var)"
                 },
                 "wrap-console-log.format.wrap.prefixStringFromInput": {
-					"markdownDescription": "Enables custom control of the formatting of the log string when using the input box to input the prefix. Use `$func` to specify the function name defined by [`Wrap Function Name`](#wrap-console-log.format.text.prefixFunctionName), `$prefix` as a placeholder for the input prefix, and `$var` to specify the variable/text to log. `$var` can be specified **one** or **multiple** times. ",
-					"type": "string",
-					"default": "$func('$prefix', $var)"
+				    "markdownDescription": "Enables custom control of the formatting of the log string when using the input box to input the prefix. Use `$func` to specify the function name defined by [`Wrap Function Name`](#wrap-console-log.format.text.prefixFunctionName), `$prefix` as a placeholder for the input prefix, and `$var` to specify the variable/text to log. `$var` can be specified **one** or **multiple** times. ",
+				    "type": "string",
+				    "default": "$func('$prefix', $var)"
 				}
             }
         },
